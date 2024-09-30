@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <div class="switch">
+        <button id="loginBtn" class="active">Login</button>
+        <button id="signupBtn">Signup</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="form active">
+        <h2>Login</h2>
+        <div class="input-group">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <input type="password" id="loginPassword" placeholder="Password" required />
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="form">
+        <h2>Signup</h2>
+        <div class="input-group">
+          <input type="text" id="signupName" placeholder="Full Name" required />
+        </div>
+        <div class="input-group">
+          <input type="email" id="signupEmail" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <input type="password" id="signupPassword" placeholder="Password" required />
+        </div>
+        <div class="input-group">
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+        </div>
+        <div id="error-message"></div>
+        <button type="submit" class="submit-btn">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
