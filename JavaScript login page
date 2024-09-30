@@ -1,0 +1,34 @@
+// Form Switch Logic
+const loginBtn = document.getElementById("loginBtn");
+const signupBtn = document.getElementById("signupBtn");
+const loginForm = document.getElementById("loginForm");
+const signupForm = document.getElementById("signupForm");
+
+loginBtn.addEventListener("click", () => {
+  loginForm.classList.add("active");
+  signupForm.classList.remove("active");
+  loginBtn.classList.add("active");
+  signupBtn.classList.remove("active");
+});
+
+signupBtn.addEventListener("click", () => {
+  signupForm.classList.add("active");
+  loginForm.classList.remove("active");
+  signupBtn.classList.add("active");
+  loginBtn.classList.remove("active");
+});
+
+// Signup Form Validation
+const signupFormElement = document.getElementById("signupForm");
+const signupPassword = document.getElementById("signupPassword");
+const confirmPassword = document.getElementById("confirmPassword");
+const errorMessage = document.getElementById("error-message");
+
+signupFormElement.addEventListener("submit", (e) => {
+  if (signupPassword.value !== confirmPassword.value) {
+    e.preventDefault();
+    errorMessage.textContent = "Passwords do not match!";
+  } else {
+    errorMessage.textContent = "";
+  }
+});
